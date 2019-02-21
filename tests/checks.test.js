@@ -87,13 +87,13 @@ describe("mooc_node-mod1_types_sentences", function () {
                 this.msg_err = `Error running the file.\n\t\t\tReceived: ${error_exe}`;
                 error_critical = this.msg_err;
             } else {
-                output = output.split('', async function () { this.name = /\r?\n\r?\n/);
+                output = output.split(/\r?\n\r?\n/);
             }
             should.not.exist(error_exe);
         }
     });
 
-    it(`3: Checking the output length`;
+    it('', async function () { this.name = `3: Checking the output length`;
         this.score = 1.5;
         if (error_critical) {
             this.msg_err = error_critical;
@@ -104,7 +104,7 @@ describe("mooc_node-mod1_types_sentences", function () {
             this.msg_err = `Unexpected output length.\n\t\t\tExpected: ${EXPECTED_OUTPUT_LENGTH} blocks\n\t\t\tRead: ${output_length} blocks`;
             output_length.should.be.equal(EXPECTED_OUTPUT_LENGTH)
         }
-    });
+      });
 
     it('', async function () { this.name = `4: Checking the initial greeting`;
         this.score = 1.5;
